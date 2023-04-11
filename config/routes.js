@@ -19,9 +19,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': 'home/index',
+  '/': 'home/view-home',
 
-  'GET /articles': 'articles/index'
+  'GET /articles': 'articles/view-articles'
 
 
   /***************************************************************************
