@@ -18,7 +18,9 @@ module.exports = {
 
     success: {
       viewTemplatePath: 'pages/articles/article'
-    }
+    },
+
+
 
   },
 

@@ -23,7 +23,11 @@ module.exports.routes = {
 
   'GET /articles': 'articles/view-articles',
 
-  'GET /articles/:id': 'articles/view-article'
+  'GET /articles/:id': 'articles/view-article',
+
+  'GET /articles/new': 'articles/view-new',
+
+  'POST /articles': 'articles/create-article'
 
 
   /***************************************************************************
