@@ -18,8 +18,10 @@ module.exports = {
 
   fn: async function () {
 
+    const recentArticles = await Article.find().sort('createdAt DESC').limit(5);
+
     // Respond with view.
-    return {};
+    return { recentArticles };
 
   }
 

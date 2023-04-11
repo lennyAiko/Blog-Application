@@ -5,3 +5,15 @@
 <h2>Recent articles</h2>
 
 <!-- Display top 5 recent articles -->
+
+<ul>
+    <% for (let recentArticle of recentArticles) { %>
+    
+    <li><%= recentArticle.title %> </li>
+
+    <% } %>
+</ul>
+
+<p>
+    <a href="/articles">See all articles</a>
+</p>

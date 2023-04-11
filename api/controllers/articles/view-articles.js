@@ -18,8 +18,10 @@ module.exports = {
 
   fn: async function () {
 
+    const articles = await Article.find().sort('createdAt DESC');
+
     // Respond with view.
-    return {};
+    return { articles };
 
   }
 
