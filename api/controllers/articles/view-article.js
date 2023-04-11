@@ -7,7 +7,11 @@ module.exports = {
   description: 'Display "Article" page.',
 
   inputs: {
-
+    id: {
+      type: 'number',
+      isInteger: true,
+      required: true
+    }
   },
 
   exits: {
@@ -19,10 +23,12 @@ module.exports = {
   },
 
 
-  fn: async function () {
+  fn: async function ({ id }) {
+
+    const article = await Article.findOne(id);
 
     // Respond with view.
-    return {};
+    return { article };
 
   }
 

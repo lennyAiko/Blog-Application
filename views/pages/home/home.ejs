@@ -9,7 +9,11 @@
 <ul>
     <% for (let recentArticle of recentArticles) { %>
     
-    <li><%= recentArticle.title %> </li>
+    <li>
+        <a href="/articles/<%= recentArticle.id %>"> 
+            <%= recentArticle.title %> 
+        </a>
+    </li>
 
     <% } %>
 </ul>
