@@ -20,7 +20,9 @@ module.exports = {
       viewTemplatePath: 'pages/articles/article'
     },
 
-
+    notFound: {
+      responseType: 'notFound'
+    }
 
   },
 
@@ -28,6 +30,8 @@ module.exports = {
   fn: async function ({ id }) {
 
     const article = await Article.findOne(id);
+
+    if (!article) { throw 'notFound';}
 
     // Respond with view.
     return { article };
