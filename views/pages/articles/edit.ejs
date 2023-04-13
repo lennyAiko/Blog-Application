@@ -1,0 +1,11 @@
+<h1> Edit article </h1>
+
+<form action="/articles/<%= articleToBeUpdated.id %>/edit" method="POST">
+    <p>
+        <input type="text" name="title" required placeholder="title" value="<%= articleToBeUpdated.title %>"/>
+    </p>
+    <p>
+        <textarea name="body" required placeholder="body"><%= articleToBeUpdated.body %></textarea>
+    </p>
+    <button type="submit">Update article</button>
+</form>
