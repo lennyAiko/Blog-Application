@@ -27,10 +27,11 @@ module.exports = {
       collection: 'comment',
       via: 'article'
     }
-
-
-
   },
+  beforeDestroy: async function(criteria, proceed) {
+    await Comment.destroy({article: criteria.where.id});
+    return proceed();
+  }
 
 };
 
