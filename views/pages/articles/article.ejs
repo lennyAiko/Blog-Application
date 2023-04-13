@@ -10,6 +10,10 @@
     <a href="/articles/<%= article.id %>/edit">Edit</a>
 </p>
 
+<form action="/articles/<%= article.id %>/delete" method="POST">
+    <button type="submit">Delete</button>
+</form>
+
 <p>
     <a href="/">Back to home</a>
 </p>
