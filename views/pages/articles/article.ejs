@@ -18,6 +18,16 @@
     <a href="/">Back to home</a>
 </p>
 
+<h2>Comments</h2>
+
+<ul>
+    <% for (let comment of article.comments) { %>
+        <li>
+            <%= comment.commenter %>: <%= comment.body %>
+        </li>
+    <% } %>
+</ul>
+
 <!--Comment form-->
 <br> 
 <form action="/articles/<%= article.id %>/comments" method="POST">
