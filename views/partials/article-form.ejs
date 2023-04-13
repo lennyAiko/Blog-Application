@@ -2,8 +2,16 @@
     <p>
         <input type="text" name="title" required placeholder="title" value="<%= articleToBeUpdated ? articleToBeUpdated.title : null %>"/>
     </p>
+
     <p>
         <textarea name="body" required placeholder="body"><%= articleToBeUpdated ? articleToBeUpdated.body : null %></textarea>
     </p>
+
+    <select name="status">
+        <option value="public" selected>Public</option>
+        <option value="private">Private</option>
+        <option value="unlisted">Unlisted</option>
+    </select>
+
     <button type="submit"><%= articleToBeUpdated ? 'Update article' : 'Create article' %></button>
 </form>

@@ -15,6 +15,9 @@ module.exports = {
     body: {
       type: 'string',
       required: true
+    },
+    status: {
+      type: 'string'
     }
   },
 
@@ -26,9 +29,9 @@ module.exports = {
   },
 
 
-  fn: async function ({ title, body }) {
+  fn: async function ({ title, body, status }) {
 
-    const { id } = await Article.create({ title, body }).fetch()
+    const { id } = await Article.create({ title, body, status }).fetch();
 
     // All done.
     return `/articles/${id}`;

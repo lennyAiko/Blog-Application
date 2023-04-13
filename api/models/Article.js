@@ -18,6 +18,11 @@ module.exports = {
       type: 'string',
       required: true
     },
+    status: {
+      type: 'string',
+      isIn: ['public', 'private', 'unlisted'],
+      defaultsTo: 'public'
+    },
     comments: {
       collection: 'comment',
       via: 'article'

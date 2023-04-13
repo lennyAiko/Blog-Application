@@ -18,10 +18,10 @@ module.exports = {
 
   fn: async function () {
 
-    const recentArticles = await Article.find().sort('createdAt DESC').limit(5);
+    const recentArticles = await Article.find({ status: 'public' }).sort('createdAt DESC').limit(5);
 
     // Respond with view.
-    return { recentArticles };
+    return { recentArticles, articlesCount: await sails.helpers.publicArticlesCount() };
 
   }
 
