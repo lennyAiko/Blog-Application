@@ -29,7 +29,7 @@ module.exports = {
 
   fn: async function ({ id }) {
 
-    const article = await Article.findOne(id);
+    const article = await Article.findOne(id).populate('comments');
 
     if (!article) { throw 'notFound';}
 

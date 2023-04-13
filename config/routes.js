@@ -33,7 +33,9 @@ module.exports.routes = {
 
   'POST /articles/:id/edit': 'articles/update-article',
 
-  'POST /articles/:id/delete': 'articles/delete-article'
+  'POST /articles/:id/delete': 'articles/delete-article',
+
+  'POST /articles/:id/comments': 'comment/create-comment'
 
 
   /***************************************************************************
