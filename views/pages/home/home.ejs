@@ -6,17 +6,7 @@
 
 <!-- Display top 5 recent articles -->
 
-<ul>
-    <% for (let recentArticle of recentArticles) { %>
-    
-    <li>
-        <a href="/articles/<%= recentArticle.id %>"> 
-            <%= recentArticle.title %> 
-        </a>
-    </li>
-
-    <% } %>
-</ul>
+<%- partial('../../partials/articles.ejs', { articles: recentArticles }) %>
 
 <p>
     <a href="/articles">See all articles</a>

@@ -1,0 +1,11 @@
+<ul>
+    <% for (let article of articles) { %>
+    
+    <li>
+        <a href="/articles/<%= article.id %>"> 
+            <%= article.title %> 
+        </a>
+    </li>
+
+    <% } %>
+</ul>

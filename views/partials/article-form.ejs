@@ -1,0 +1,9 @@
+<form action="<%= articleToBeUpdated ? '/articles/' + articleToBeUpdated.id + '/edit' : '/articles' %>" method="POST">
+    <p>
+        <input type="text" name="title" required placeholder="title" value="<%= articleToBeUpdated ? articleToBeUpdated.title : null %>"/>
+    </p>
+    <p>
+        <textarea name="body" required placeholder="body"><%= articleToBeUpdated ? articleToBeUpdated.body : null %></textarea>
+    </p>
+    <button type="submit"><%= articleToBeUpdated ? 'Update article' : 'Create article' %></button>
+</form>

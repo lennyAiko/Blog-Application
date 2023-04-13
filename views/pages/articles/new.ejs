@@ -1,11 +1,3 @@
 <h1> New article </h1>
 
-<form action="/articles" method="POST">
-    <p>
-        <input type="text" name="title" required placeholder="title" />
-    </p>
-    <p>
-        <textarea name="body" required placeholder="body"></textarea>
-    </p>
-    <button type="submit">Create article</button>
-</form>
+<%- partial('../../partials/article-form.ejs', { articleToBeUpdated: undefined }) %>
